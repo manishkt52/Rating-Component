@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating-Component</title>
+    <link rel="icon" href="./Design-Files/images/favicon-32x32.png" type="favicon-image">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Dynamic Rating According to User JS -->
+    <script>
+        function getValueFromLocalStorage() {
+            let result = localStorage.getItem('finalResult');
+            document.querySelector('.currentRate').textContent = result;
+        }
+        window.onload = getValueFromLocalStorage;
+    </script>
+</head>
+<body>
+     <div class="card">
+         <div class="content">
+            <!-- Image Center -->
+             <img class="thank-img" src="./Design-Files/images/illustration-thank-you.svg" alt="thank-image">
+             <!-- Selected Rating -->
+              <p class="selectRating">You selected <span class="currentRate">4</span> out of 5</p>
+              <!-- Thank You Message -->
+               <h1 class="thank-h1">Thank you!</h1>
+               <!-- thank.html paragraph -->
+                <p class="last-message"> We appreciate you taking the time to give a rating. <br>    If you ever need more support, 
+                    don’t hesitate to <br> get in touch!</p>
+         </div>
+     </div>
+</body>
+</html>
